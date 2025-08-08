@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 app.get("/timetable", async (req, res) => {
   const { GOOGLE_API_KEY, SPREADSHEET_ID } = process.env;
 
-  const range = "Timetable!A1:Z";
+  const range = "Timetable!A2:AZ";
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${range}?key=${GOOGLE_API_KEY}`;
 
   try {
@@ -32,7 +32,7 @@ app.get("/timetable", async (req, res) => {
 app.get("/contacts", async (req, res) => {
   const { GOOGLE_API_KEY, SPREADSHEET_ID } = process.env;
 
-  const range = "Contacts!A1:B";
+  const range = "Contacts!A2:AZ";
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${range}?key=${GOOGLE_API_KEY}`;
 
   try {
